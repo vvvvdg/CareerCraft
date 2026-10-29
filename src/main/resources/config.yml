@@ -1,0 +1,8 @@
+# CareerCraft 主配置
+# 改完执行 /cc reload 生效，不用重启服务器
+
+# 调试模式：会在控制台打印每一条被监听到的进度/统计事件，用来排查“为什么没触发”
+debug: false
+
+# 成就定义文件名（存放在插件数据目录下）
+achievements-file: achievements.yml

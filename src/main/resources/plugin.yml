@@ -1,0 +1,18 @@
+name: CareerCraft
+version: '${project.version}'
+main: com.xiangqin.careercraft.CareerCraftPlugin
+api-version: '26.3'
+description: 生涯之书 · 按玩家进度发放生涯成就与奖励
+author: 一香芹酮
+website: https://github.com/vvvvdg/CareerCraft
+
+commands:
+  cc:
+    description: CareerCraft 主命令
+    usage: /cc help
+    aliases: [careercraft, shengya]
+
+permissions:
+  careercraft.admin:
+    description: 允许查看成就列表与重载配置
+    default: op

@@ -1,0 +1,27 @@
+# CareerCraft 成就表
+#
+# 每条成就的结构（P1 完整实现时会有事件监听与发奖）：
+#   id        唯一标识，英文小写，改了就当成新成就
+#   name      显示名（支持 & 颜色符）
+#   desc      描述，可以留空
+#   trigger   事件类型，目前骨架阶段只解析不执行
+#   enabled   是否启用，默认 true
+#
+# 事件类型（P1 实现）：
+#   item_obtain     获得物品
+#   kill_mob        击杀生物
+#   death_by_entity 被生物杀死
+#   kill_player     击杀玩家
+#   break_block     挖掉方块
+#   place_block     放置方块
+#   playtime        在线时长（分钟）
+#   login_streak    连续登录（天）
+#
+# 下面这条只是让 /cc list 有东西可显示，随时可以删。
+
+achievements:
+  - id: first_join
+    name: '&e初次见面'
+    desc: '第一次进入服务器'
+    trigger: first_join
+    enabled: true
