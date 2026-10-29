@@ -14,7 +14,8 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.release>21</maven.compiler.release>
+    <!-- Purpur/Paper 26.3 的 API 是 Java 25 编译的（class major 69），必须用 JDK 25 -->
+    <maven.compiler.release>25</maven.compiler.release>
     <!-- 跟随服务端：Purpur 26.3（API 26.3.build.2647） -->
     <paper.version>26.3.build.230-stable</paper.version>
   </properties>

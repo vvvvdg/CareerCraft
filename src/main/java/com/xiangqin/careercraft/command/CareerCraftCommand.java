@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Locale;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
+import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -73,7 +74,8 @@ public final class CareerCraftCommand implements CommandExecutor, TabCompleter {
         for (AchievementDefinition def : all) {
             sender.sendMessage(Component.text(" - " + def.id(), NamedTextColor.YELLOW)
                     .append(Component.text(" [" + def.trigger() + "]", NamedTextColor.DARK_AQUA))
-                    .append(Component.text(" " + def.name().replace('&', '§'), NamedTextColor.WHITE))
+                    .append(Component.text(" "))
+                    .append(LegacyComponentSerializer.legacyAmpersand().deserialize(def.name()))
                     .append(def.enabled() ? Component.empty() : Component.text(" (已停用)", NamedTextColor.DARK_GRAY)));
         }
     }
